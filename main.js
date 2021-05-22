@@ -2,21 +2,17 @@ var images=["father.jpg","mother.jpg","grandfather.jpg","grandmother.png","Me.jp
 var names=['Family Book','Father','Mother','Grandfather','grandmother','Me','Little Brother'];
 
 var i=0;
-var n=0;
 
 function Update()
 {
-   if(i==6)
-   {
-       i++;
-   }
-   document.getElementById('i1').src=images[i];
-
-
-   if(n==6)
-   {
-    n++;
-   }
-document.getElementById('name').src=names[n];
-
+  i++;
+  var number_of_family=6;
+  if(i>number_of_family)
+  {
+      i=0;
+  }
+  var name= names[i];
+  var image= images[i];
+  document.getElementById('i1').src=image;
+  document.getElementById('name').innerHTML=names;
 }
